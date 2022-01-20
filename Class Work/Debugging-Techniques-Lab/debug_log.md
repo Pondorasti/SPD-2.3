@@ -25,11 +25,11 @@ Taking a **trace backward** approach.
 
 Looks like the error is coming from `app.py`, line 79, in `pizza_order_submit` route.
 
-`PizzaTopping` initializer is using wrong property name (`topping` instead of `topping_type`). Fixed that, new error! Taking a look at `pizza_size_str` variable, it's null! HTML form input name is not matching, renamed it! Same problem with `order_name`... Noticed how db data is not commited after beind added, fixed that too! Fixed `PizzaTopping` array creation. Final bug fix, change `redirect(url_for('/'))` to `redirect(url_for('home'))`.
+`PizzaTopping` initializer is using wrong property name (`topping` instead of `topping_type`). Fixed that, new error! Taking a look at `pizza_size_str` variable, it's `None`! HTML form input name is not matching, renamed it! Same problem with `order_name`... Noticed how db data is not commited after beind added, fixed that too! Fixed `PizzaTopping` array creation. Final bug fix, change `redirect(url_for('/'))` to `redirect(url_for('home'))`.
 
 ## Exercise 2
 
-[[Your answer goes here!]]
+Submitting the code throws a an internal server error, stack trace points to line 52, in `app.py`, `KeyError: 'name'`. `result_json` comes back with an api error, looks like the params passed are `None`. Fixed argument name typos, still getting api error. Api param name type, changed `place` to `q`. Final bug fix, json key typo, changed `temperature` to `temp`.
 
 ## Exercise 3
 
