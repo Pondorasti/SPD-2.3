@@ -33,4 +33,4 @@ Submitting the code throws a an internal server error, stack trace points to lin
 
 ## Exercise 3
 
-[[Your answer goes here!]]
+Taking a first look, `merge_sort` utility function throws index out of range on line 37. Wrong index variable is being used, `i` instead of `j`. Next bug seems to be related with `binary_search` utility function. Easy fix, division is not rounded to the closest integer and instead left as a float.
